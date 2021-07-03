@@ -1,30 +1,27 @@
-import faker from "faker";
-import { createServer, Model, Factory } from "miragejs";
-import { Exercise } from "@/components/fitness/types";
+import { createServer } from "miragejs";
+import FitnessServer from "@/mirage/fitness/server";
 
 export function makeServer({ environment = "development" } = {}) {
     const server = createServer({
         environment,
 
         factories: {
-            exercise: Factory.extend<Partial<Exercise>>({
-                get name() {
-                    return faker.hacker.noun().concat(' ', faker.hacker.verb());
-                },
-            }),
+            ...FitnessServer.factories,
         },
 
         models: {
-            exercise: Model.extend<Partial<Exercise>>({}),
+            ...FitnessServer.models,
         },
 
         routes() {
             this.namespace = "api";
-            this.get("/exercises");
+            FitnessServer.routes(this);
         },
 
         seeds(server) {
-            server.createList("exercise", 10);
+            FitnessServer.seeds(server);
         }
-    })
+    });
+
+    console.log(server);
 }
