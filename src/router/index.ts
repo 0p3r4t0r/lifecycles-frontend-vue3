@@ -1,5 +1,5 @@
 import { createWebHistory, createRouter } from 'vue-router';
-import Exercises from '@/components/fitness/pages/Exercises.vue';
+import Exercises from '@/components/fitness/pages/exercises/exercises.vue';
 import Home from '@/components/base/pages/Home.vue';
 import About from '@/components/base/pages/About.vue';
 
