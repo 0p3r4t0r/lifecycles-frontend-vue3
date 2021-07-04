@@ -5,7 +5,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import HelloWorld from '@/components/base/organisms/HelloWorld.vue'
 
 export default {
