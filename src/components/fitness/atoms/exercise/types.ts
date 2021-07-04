@@ -1,3 +1,3 @@
 export type ExerciseProp = {
-    name: String;
+    name: string;
 }

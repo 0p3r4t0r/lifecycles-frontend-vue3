@@ -15,7 +15,7 @@ import Exercise from '@/components/fitness/atoms/exercise/exercise.vue'
 import { ExerciseProp } from '@/components/fitness/atoms/exercise/types';
 
 export default defineComponent({
-  name: 'App',
+  name: 'Exercises',
   components: {
     Exercise,
   },
