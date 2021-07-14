@@ -15,7 +15,7 @@ const models = {
 }
 
 const routes = function (server: Server) {
-    server.get("/exercises")
+    server.get("/fitness/exercises")
 }
 
 const seeds = function (server: Server) {

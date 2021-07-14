@@ -20,7 +20,7 @@ export default defineComponent({
     Exercise,
   },
   created() {
-        axios.get('/api/exercises')
+        axios.get('/api/fitness/exercises')
             .then((response) => {
                 console.log(response.data);
                 this.exercises = response.data.exercises;
