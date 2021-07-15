@@ -1,5 +1,6 @@
 import { createWebHistory, createRouter } from 'vue-router';
 import Exercises from '@/components/fitness/pages/exercises/exercises.vue';
+import Sets from '@/components/fitness/pages/sets/sets.vue';
 import Home from '@/components/base/pages/Home.vue';
 import About from '@/components/base/pages/About.vue';
 import Labratory from '@/components/base/pages/Labratory.vue';
@@ -16,6 +17,10 @@ const routes = [
     {
         path: "/fitness/exercises",
         component: Exercises,
+    },
+    {
+        path: "/fitness/sets",
+        component: Sets,
     },
     {
         path: "/laboratory",
