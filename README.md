@@ -22,3 +22,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Vue Conventions
+* https://vuejs.org/v2/guide/single-file-components.html#What-About-Separation-of-Concerns

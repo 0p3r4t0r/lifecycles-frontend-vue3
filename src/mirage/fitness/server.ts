@@ -1,25 +1,25 @@
 import faker from "faker";
 import { Model, Factory, Server } from "miragejs";
-import { ExerciseProp } from "@/components/fitness/atoms/exercise/types";
-import { SetProp } from "@/components/fitness/atoms/set/types";
+import { ExerciseProp } from "@/components/fitness/atoms/Exercise/Exercise";
+import { SetProp } from "@/components/fitness/atoms/Set/Set";
 
 const factories = {
     exercise: Factory.extend<PropFactory<ExerciseProp>>({
-        name(i) {
+        name(i: number) {
             return `${i}: ${faker.hacker.noun()} ${faker.hacker.verb()}`;
         },
     }),
     set: Factory.extend<PropFactory<SetProp>>({
-        exercise(i) {
+        exercise(i: number) {
             return { name: `${i}: ${faker.hacker.noun()} ${faker.hacker.verb()}` };
         },
-        for(i) {
+        for(i: number) {
            return i % 2 ? "reps" : "durationInSeconds"; 
         },
-        reps(i) {
+        reps(i: number) {
             return i % 2 ? Math.floor(Math.random() * 10) : undefined;
         },
-        durationInSeconds(i) {
+        durationInSeconds(i: number) {
             return i % 2 ? undefined : Math.floor(Math.random() * 60);
         }
     }),

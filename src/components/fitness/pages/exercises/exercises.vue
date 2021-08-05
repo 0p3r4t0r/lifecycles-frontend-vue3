@@ -7,28 +7,5 @@
     </ul>
 </template>
 
-<script lang="ts">
-import axios from 'axios';
-import { defineComponent, PropType } from 'vue';
-
-import Exercise from '@/components/fitness/atoms/exercise/exercise.vue'
-import { ExerciseProp } from '@/components/fitness/atoms/exercise/types';
-
-export default defineComponent({
-  name: 'Exercises',
-  components: {
-    Exercise,
-  },
-  created() {
-        axios.get('/api/fitness/exercises')
-            .then((response) => {
-                console.log(response.data);
-                this.exercises = response.data.exercises;
-        });
-    },
-    data: () => ({
-        exercises: [] as PropType<Array<ExerciseProp>>,
-    }),
-});
-</script>
+<script src="./Exercises"></script>
 
