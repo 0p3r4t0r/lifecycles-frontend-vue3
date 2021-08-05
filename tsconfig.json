@@ -7,6 +7,8 @@
     "importHelpers": true,
     "moduleResolution": "node",
     "allowJs": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
