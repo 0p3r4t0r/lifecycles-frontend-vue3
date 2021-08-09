@@ -1,12 +1,27 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/laboratory">Laboratory</router-link> |
-    <router-link to="/fitness/exercises">Exercises</router-link>
-  </div>
+  <Navbar :links="links"/>
   <router-view/>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import Navbar from "@/components/base/molecules/Navbar/Navbar.vue" 
+import { NavbarLinks } from "@/components/base/molecules/Navbar/types" 
+
+export default defineComponent({
+  components: { Navbar },
+  data: (): { links: NavbarLinks } => ({
+    links: [
+      { to: "/", text: "Home" },
+      { to: "/about", text: "About" },
+      { to: "/laboratory", text: "Lab" },
+      { to: "/fitness/exercises", text: "Exercises" },
+      { to: "/fitness/sets", text: "Sets" },
+    ],
+  }),
+})
+</script>
+
 
 <style>
 #app {
@@ -15,18 +30,5 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
 }
 </style>
