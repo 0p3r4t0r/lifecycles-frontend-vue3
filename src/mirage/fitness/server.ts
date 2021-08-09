@@ -1,7 +1,7 @@
 import faker from "faker";
 import { Model, Factory, Server } from "miragejs";
-import { ExerciseProp } from "@/components/fitness/atoms/Exercise/Exercise";
-import { SetProp } from "@/components/fitness/atoms/Set/Set";
+import { ExerciseProp } from "@/components/fitness/atoms/Exercise/types";
+import { SetProp } from "@/components/fitness/atoms/Set/types";
 
 const factories = {
     exercise: Factory.extend<PropFactory<ExerciseProp>>({
