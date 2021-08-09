@@ -13,7 +13,7 @@ import { defineComponent, PropType } from 'vue';
 import Exercise from '@/components/fitness/atoms/Exercise/Exercise.vue'
 import { ExercisesProp } from './types';
 
-const Exercies = defineComponent({
+export default defineComponent({
   name: 'Exercises',
   components: {
     Exercise,
@@ -29,7 +29,5 @@ const Exercies = defineComponent({
         exercises: [] as PropType<ExercisesProp>,
     }),
 });
-
-export default Exercies
 </script>
 

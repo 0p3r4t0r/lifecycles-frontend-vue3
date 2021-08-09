@@ -8,7 +8,7 @@
 import { defineComponent, PropType } from 'vue';
 import { SetProp } from "./types";
 
-const Set = defineComponent({
+export default defineComponent({
   name: 'Set',
   props: {
       set: {
@@ -17,8 +17,6 @@ const Set = defineComponent({
       },
   },
 });
-
-export default Set;
 </script>
 
 <style scoped>

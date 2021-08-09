@@ -1,25 +1,27 @@
 <template>
-  <Navbar :links="links"/>
-  <router-view/>
+  <Navbar :links="links" />
+  <router-view />
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import Navbar from "@/components/base/molecules/Navbar/Navbar.vue" 
-import { NavbarLinks } from "@/components/base/molecules/Navbar/types" 
+import { defineComponent } from "vue";
+import Navbar from "@/components/base/molecules/Navbar/Navbar.vue";
+import { NavbarLinks } from "@/components/base/molecules/Navbar/types";
 
 export default defineComponent({
   components: { Navbar },
-  data: (): { links: NavbarLinks } => ({
-    links: [
-      { to: "/", text: "Home" },
-      { to: "/about", text: "About" },
-      { to: "/laboratory", text: "Lab" },
-      { to: "/fitness/exercises", text: "Exercises" },
-      { to: "/fitness/sets", text: "Sets" },
-    ],
-  }),
-})
+  data(): { links: NavbarLinks } {
+    return {
+      links: [
+        { to: "/", text: "Home" },
+        { to: "/about", text: "About" },
+        { to: "/laboratory", text: "Lab" },
+        { to: "/fitness/exercises", text: "Exercises" },
+        { to: "/fitness/sets", text: "Sets" },
+      ],
+    };
+  },
+});
 </script>
 
 

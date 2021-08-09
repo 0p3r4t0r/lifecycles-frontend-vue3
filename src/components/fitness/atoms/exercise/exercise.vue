@@ -8,7 +8,7 @@
 import { defineComponent, PropType } from 'vue';
 import { ExerciseProp } from "./types";
 
-const Exercise = defineComponent({
+export default defineComponent({
   name: 'Exercise',
   props: {
       exercise: {
@@ -17,8 +17,6 @@ const Exercise = defineComponent({
       },
   },
 });
-
-export default Exercise
 </script>
 
 <style scoped>
