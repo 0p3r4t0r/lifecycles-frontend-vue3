@@ -11,7 +11,6 @@
     "@types/faker": "^5.5.6",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
-    "element-plus": "^1.0.2-beta.53",
     "faker": "^5.5.3",
     "lodash": "^4.17.21",
     "miragejs": "^0.1.41",
