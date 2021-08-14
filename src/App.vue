@@ -4,26 +4,18 @@
     href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
     rel="stylesheet"
   />
-  <Navbar :links="links" />
+  <Navbar />
   <router-view />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Navbar, { NavbarProps } from "@/components/base/molecules/Navbar"
+import Navbar from "@/components/base/molecules/Navbar";
 
 export default defineComponent({
   components: { Navbar },
-  data(): { links: NavbarProps["links"] } {
-    return {
-      links: [
-        { to: "/", text: "Home" },
-        { to: "/about", text: "About" },
-        { to: "/laboratory", text: "Lab" },
-        { to: "/fitness/exercises", text: "Exercises" },
-        { to: "/fitness/sets", text: "Sets" },
-      ],
-    };
+  data(): {} {
+    return {};
   },
 });
 </script>
