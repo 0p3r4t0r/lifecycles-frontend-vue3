@@ -10,12 +10,11 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Navbar from "@/components/base/molecules/Navbar/Navbar.vue";
-import { NavbarLinks } from "@/components/base/molecules/Navbar/types";
+import Navbar, { NavbarProps } from "@/components/base/molecules/Navbar"
 
 export default defineComponent({
   components: { Navbar },
-  data(): { links: NavbarLinks } {
+  data(): { links: NavbarProps["links"] } {
     return {
       links: [
         { to: "/", text: "Home" },
