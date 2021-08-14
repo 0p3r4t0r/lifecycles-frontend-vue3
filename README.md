@@ -1,5 +1,19 @@
 # frontend
 
+## TODO
+- [ ] docs?
+    - [ ] Setup Vuepress
+    - [ ] Host on github pages
+- [ ] Exercises
+    - [ ] Exercises CRUD API docs
+    - [ ] Exercises CRUD Pages
+- [ ] Sets CRUD
+    - [ ] Sets CRUD API docs
+    - [ ] Sets CRUD Pages
+
+## Stuff to study
+* https://vuepress.vuejs.org/guide/
+
 ## Project setup
 ```
 npm install
