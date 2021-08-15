@@ -1,5 +1,6 @@
 import { defineUserConfig } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
+import path from 'path'
 
 // https://v2.vuepress.vuejs.org/guide/configuration.html#config-file
 export default defineUserConfig<DefaultThemeOptions>({
@@ -14,6 +15,13 @@ export default defineUserConfig<DefaultThemeOptions>({
   // https://v2.vuepress.vuejs.org/reference/plugin-api.html#extendsmarkdown
   extendsMarkdown: (md) => {
       md.use(require('markdown-it-plantuml'))
-  }
+  },
 
+  // https://v2.vuepress.vuejs.org/reference/config.html#markdown-importcode
+  markdown: {
+    importCode: {
+      handleImportPath: (str) => 
+        str.replace(/^@src/, path.resolve(__dirname, '../../../src'))
+    }
+  }
 })
