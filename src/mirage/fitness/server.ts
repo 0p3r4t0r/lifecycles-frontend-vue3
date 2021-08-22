@@ -1,7 +1,8 @@
-import faker from "faker";
-import { Model, Factory, Server } from "miragejs";
-import { ExerciseProp } from "@/components/fitness/atoms/Exercise";
-import { SetProp } from "@/components/fitness/atoms/Set";
+import faker from "faker"
+import { Model, Factory, Server } from "miragejs"
+import { ExerciseProp } from "@/components/fitness/atoms/Exercise"
+import { SetProp } from "@/components/fitness/atoms/Set"
+import api from "@/components/fitness/api"
 
 const factories = {
     exercise: Factory.extend<PropFactory<ExerciseProp>>({
@@ -31,8 +32,8 @@ const models = {
 }
 
 const routes = function (server: Server) {
-    server.get("/fitness/exercises"),
-    server.get("fitness/sets")
+    server.get(api.exercises),
+    server.get(api.sets)
 }
 
 const seeds = function (server: Server) {

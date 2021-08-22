@@ -1,13 +1,14 @@
 import axios from 'axios';
 import Exercise, { ExerciseProp } from '@/components/fitness/atoms/Exercise'
 import { ref, onMounted, defineComponent } from 'vue'
+import endpoints from '@/components/fitness/api'
 
 export type ExercisesProp = Array<ExerciseProp>
 
 export default defineComponent({
     setup() {
         const exercises = ref([]);
-        const getExercises = async () => axios.get('/api/fitness/exercises')
+        const getExercises = async () => axios.get(endpoints.exercises)
             .then((response) => {
                 console.log(response.data);
                 exercises.value = response.data.exercises;
