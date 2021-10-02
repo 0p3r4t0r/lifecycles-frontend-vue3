@@ -1,5 +1,7 @@
 # frontend
 
+## ~~Vue 3~~ -> Angular
+
 ## TODO
 - [ ] docs?
     - [ ] Setup Vuepress
